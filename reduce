@@ -31,3 +31,14 @@ function reduce(collection, iteratee, accumulator) {
   const initAccum = arguments.length < 3
   return func(collection, iteratee, accumulator, initAccum, baseEach)
 }
+
+
+
+.............................................................................
+
+https://stackoverflow.com/questions/5732043/javascript-reduce-on-array-of-objects
+
+var arr = [{x:1}, {x:2}, {x:4}];
+arr.reduce(function (acc, obj) { return acc + obj.x; }, 0); // 7
+
+
