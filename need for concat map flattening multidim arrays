@@ -1,4 +1,6 @@
 
+http://www.jstips.co/en/javascript/flattening-multidimensional-arrays-in-javascript/
+
 var movieLists = [
 			{
 				name: "Instant Queue",
@@ -71,8 +73,20 @@ var res = movieLists.  //2 array
     			map(function(boxart) {
     				return {id: video.id, title: video.title, boxart: boxart.url};
     		    });
-		    })
+		    }) 
 
 
-      })
+      }) //reduce(function(prev, curr) { return prev.concat(curr) }) // [Array(1), Array(1), Array(1), Array(1)]
+      //using reduce again reduce(function(prev, curr) { return prev.concat(curr) }) will result in [Object, Object, Object, Object]
+
 console.log(res)
+
+
+[ Array[2], Array[2]]
+[Array(1), Array(1), Array(1), Array(1)]
+[Object, Object, Object, Object]
+
+
+
+
+
